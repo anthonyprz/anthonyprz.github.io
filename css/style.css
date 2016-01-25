@@ -123,3 +123,13 @@ body footer:before {
 #git{
   text-decoration: none;
 }
+
+#descripcion{
+text-align: center;
+font-family: 'Miniver', cursive;
+ font-size:40px;
+ color:#F2F2F2;
+ z-index:1;
+ margin-top:33%;
+  
+}
