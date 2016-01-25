@@ -1,0 +1,197 @@
+@import url(https://fonts.googleapis.com/css?family=Lora);
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  background: url(http://i65.tinypic.com/2q88sud.jpg) no-repeat center;
+  background-size: cover;
+  position: relative;
+  width:100%;
+  margin:0;
+  font-family: 'Lora', serif;
+  font-size:14px;
+    & .tint{
+    content: '';
+    position: absolute;
+    left: 0; top: 0; right: 0; bottom: 0;
+    background-image: linear-gradient(-45deg, hsla(62, 90%, 50%,.6), hsla(322, 90%, 50%, .6));
+    animation: hue-rot 7s infinite alternate;
+  }
+    & footer{
+      height:2rem;
+      line-height:2rem;
+      position:absolute;
+      text-align:center;
+      right:.02rem;
+      bottom:0;
+      padding:.7rem;
+      background: #323233;
+      color:#A6A5A4;
+      box-shadow:0 -4px 8px hsla(0,0%,0%,.2);
+      text-shadow:1px 1px hsla(0,0%,5%,1),-1px -1px #323233;
+      &:before{
+        content:"Resize to Mobile Nav && Click It!";
+      }
+    }
+}
+@keyframes hue-rot {
+ 100% {
+    filter: hue-rotate(360deg);
+  }
+}
+#header{
+  z-index:999;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:60px;
+  background:#323233;
+  box-shadow:0 1px 3px rgba(0,0,0,0.2);
+  text-shadow:1px 1px hsla(0,0%,5%,1),-1px -1px #323233;
+    & .container{
+    height:100%;
+    }
+    & #toggle{
+    display:none;
+    }
+}
+#nav{
+  position:absolute;
+  right:0;top:15px;
+  transition:all .15s ease-in-out;
+  & ul{
+    list-style:none;
+    margin:0;padding:0;
+  }
+  &  li{
+    float:left;
+  }
+  &  a{
+      display:block;
+      color:#A6A5A4;
+      height:30px;
+      line-height:30px;
+      padding:0 20px;
+      font-size:1rem;
+      font-weight:300;
+      text-decoration:none;
+      transition:all .3s ease-in-out;
+      &:hover{
+        color:#ccc;
+        font-size:1.05rem;
+        letter-spacing:4px;
+        font-weight:bold;
+      }
+  }
+}
+
+@media(max-width:767px){
+  #nav a{
+    padding:0 12px;
+  }
+}
+@media(max-width:599px){
+  #header{
+    background:#323233!important;
+    border:none!important;
+    height:50px;
+    & .container{
+      width:100%;
+    }
+    & #toggle{
+      position:absolute;
+      display:block;
+      width:30px;
+      height:30px;
+      top:10px;
+      left:2%;
+      cursor:pointer;
+      &  span{
+        display:block;
+        position:absolute;
+        top:9px;
+        left:50%;
+        width:17px;
+        height:1px;
+        background:#888;
+        -webkit-transition:350ms;
+        -moz-transition:350ms;
+        -o-transition:350ms;
+        -ms-transition:350ms;
+        transition:350ms;
+      }
+    }
+  }
+ 
+  #header #toggle .l2{
+    top:14px;
+  }
+  #header #toggle .l3{
+    top:19px;
+  }
+  .open #toggle .l1{
+    -webkit-transform:rotate(45deg) translate(0px,7px);
+    -moz-transform:rotate(45deg) translate(0px,7px);
+    -ms-transform:rotate(45deg) translate(0px,7px);
+    -o-transform:rotate(45deg) translate(0px,7px);
+    transform:rotate(45deg) translate(0px,7px);
+  }
+  .open #toggle .l2{
+    opacity:0;
+  }
+  .open #toggle .l3{
+    -webkit-transform:rotate(-45deg) translate(0px,-7px);
+    -moz-transform:rotate(-45deg) translate(0px,-7px);
+    -ms-transform:rotate(-45deg) translate(0px,-7px);
+    -o-transform:rotate(-45deg) translate(0px,-7px);
+    transform:rotate(-45deg) translate(0px,-7px);
+  }
+  .open #nav ul{
+   max-height:1000px;
+   -webkit-transform:perspective(600) rotate3d(0,0,0,0);
+  }
+  .open #nav:before{
+    -webkit-transform:rotate(45deg) translate(0,6px);
+    -moz-transform:rotate(45deg) translate(0,6px);
+    -ms-transform:rotate(45deg) translate(0,6px);
+    -o-transform:rotate(45deg) translate(0,6px);
+    transform:rotate(45deg) translate(0,6px);
+    border-bottom:0
+  }
+  .open #nav:after{
+    -webkit-transform:rotate(-45deg);
+    -moz-transform:rotate(-45deg);
+    -ms-transform:rotate(-45deg);
+    -o-transform:rotate(-45deg);
+    transform:rotate(-45deg);
+  }
+  #nav{
+      top:50px;left:0;
+      & ul{
+      max-height:0;
+      overflow:hidden;
+      background:#323233;
+      -webkit-transform:perspective(600) rotate3d(1,0,0,-90deg);
+      -webkit-transform-origin:50% 0;
+      -webkit-transition:350ms;
+      -moz-transition:350ms;
+      -o-transition:350ms;
+      -ms-transition:350ms;
+      transition:350ms;
+    }
+    & li{
+      display:block;
+      float:none;
+    }
+    & a{
+      text-align:center;
+      padding:0;
+      border-top:1px solid #3B3B3B;
+      height:44px;
+      line-height:44px;
+      color:#A6A5A4 !important;
+    }
+  }
+}

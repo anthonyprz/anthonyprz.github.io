@@ -1,0 +1,214 @@
+@import url(https://fonts.googleapis.com/css?family=Lora);
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background: url(http://i65.tinypic.com/2q88sud.jpg) no-repeat center;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  font-family: 'Lora', serif;
+  font-size: 14px;
+}
+body .tint {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-image: -webkit-linear-gradient(135deg, rgba(235, 242, 13, 0.6), rgba(242, 13, 158, 0.6));
+  background-image: linear-gradient(-45deg, rgba(235, 242, 13, 0.6), rgba(242, 13, 158, 0.6));
+  -webkit-animation: hue-rot 7s infinite alternate;
+          animation: hue-rot 7s infinite alternate;
+}
+body footer {
+  height: 2rem;
+  line-height: 2rem;
+  position: absolute;
+  text-align: center;
+  right: .02rem;
+  bottom: 0;
+  padding: .7rem;
+  background: #323233;
+  color: #A6A5A4;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+  text-shadow: 1px 1px #0d0d0d, -1px -1px #323233;
+}
+body footer:before {
+  content: "Resize to Mobile Nav && Click It!";
+}
+
+@-webkit-keyframes hue-rot {
+  100% {
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes hue-rot {
+  100% {
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
+}
+#header {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: #323233;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  text-shadow: 1px 1px #0d0d0d, -1px -1px #323233;
+}
+#header .container {
+  height: 100%;
+}
+#header #toggle {
+  display: none;
+}
+
+#nav {
+  position: absolute;
+  right: 0;
+  top: 15px;
+  -webkit-transition: all .15s ease-in-out;
+  transition: all .15s ease-in-out;
+}
+#nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#nav li {
+  float: left;
+}
+#nav a {
+  display: block;
+  color: #A6A5A4;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 20px;
+  font-size: 1rem;
+  font-weight: 300;
+  text-decoration: none;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+#nav a:hover {
+  color: #ccc;
+  font-size: 1.05rem;
+  letter-spacing: 4px;
+  font-weight: bold;
+}
+
+@media (max-width: 767px) {
+  #nav a {
+    padding: 0 12px;
+  }
+}
+@media (max-width: 599px) {
+  #header {
+    background: #323233 !important;
+    border: none !important;
+    height: 50px;
+  }
+  #header .container {
+    width: 100%;
+  }
+  #header #toggle {
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 30px;
+    top: 10px;
+    left: 2%;
+    cursor: pointer;
+  }
+  #header #toggle span {
+    display: block;
+    position: absolute;
+    top: 9px;
+    left: 50%;
+    width: 17px;
+    height: 1px;
+    background: #888;
+    -webkit-transition: 350ms;
+    transition: 350ms;
+  }
+
+  #header #toggle .l2 {
+    top: 14px;
+  }
+
+  #header #toggle .l3 {
+    top: 19px;
+  }
+
+  .open #toggle .l1 {
+    -webkit-transform: rotate(45deg) translate(0px, 7px);
+    transform: rotate(45deg) translate(0px, 7px);
+  }
+
+  .open #toggle .l2 {
+    opacity: 0;
+  }
+
+  .open #toggle .l3 {
+    -webkit-transform: rotate(-45deg) translate(0px, -7px);
+    transform: rotate(-45deg) translate(0px, -7px);
+  }
+
+  .open #nav ul {
+    max-height: 1000px;
+    -webkit-transform: perspective(600) rotate3d(0, 0, 0, 0);
+  }
+
+  .open #nav:before {
+    -webkit-transform: rotate(45deg) translate(0, 6px);
+    transform: rotate(45deg) translate(0, 6px);
+    border-bottom: 0;
+  }
+
+  .open #nav:after {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  #nav {
+    top: 50px;
+    left: 0;
+  }
+  #nav ul {
+    max-height: 0;
+    overflow: hidden;
+    background: #323233;
+    -webkit-transform: perspective(600) rotate3d(1, 0, 0, -90deg);
+    -webkit-transform-origin: 50% 0;
+    -webkit-transition: 350ms;
+    transition: 350ms;
+  }
+  #nav li {
+    display: block;
+    float: none;
+  }
+  #nav a {
+    text-align: center;
+    padding: 0;
+    border-top: 1px solid #3B3B3B;
+    height: 44px;
+    line-height: 44px;
+    color: #A6A5A4 !important;
+  }
+}
+#nombre{
+  text-align: center;
+}
+#git{
+  text-decoration: none;
+}
