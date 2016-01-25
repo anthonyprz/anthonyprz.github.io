@@ -112,102 +112,13 @@ body footer:before {
     padding: 0 12px;
   }
 }
-@media (max-width: 599px) {
-  #header {
-    background: #323233 !important;
-    border: none !important;
-    height: 50px;
-  }
-  #header .container {
-    width: 100%;
-  }
-  #header #toggle {
-    position: absolute;
-    display: block;
-    width: 30px;
-    height: 30px;
-    top: 10px;
-    left: 2%;
-    cursor: pointer;
-  }
-  #header #toggle span {
-    display: block;
-    position: absolute;
-    top: 9px;
-    left: 50%;
-    width: 17px;
-    height: 1px;
-    background: #888;
-    -webkit-transition: 350ms;
-    transition: 350ms;
-  }
 
-  #header #toggle .l2 {
-    top: 14px;
-  }
-
-  #header #toggle .l3 {
-    top: 19px;
-  }
-
-  .open #toggle .l1 {
-    -webkit-transform: rotate(45deg) translate(0px, 7px);
-    transform: rotate(45deg) translate(0px, 7px);
-  }
-
-  .open #toggle .l2 {
-    opacity: 0;
-  }
-
-  .open #toggle .l3 {
-    -webkit-transform: rotate(-45deg) translate(0px, -7px);
-    transform: rotate(-45deg) translate(0px, -7px);
-  }
-
-  .open #nav ul {
-    max-height: 1000px;
-    -webkit-transform: perspective(600) rotate3d(0, 0, 0, 0);
-  }
-
-  .open #nav:before {
-    -webkit-transform: rotate(45deg) translate(0, 6px);
-    transform: rotate(45deg) translate(0, 6px);
-    border-bottom: 0;
-  }
-
-  .open #nav:after {
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-  }
-
-  #nav {
-    top: 50px;
-    left: 0;
-  }
-  #nav ul {
-    max-height: 0;
-    overflow: hidden;
-    background: #323233;
-    -webkit-transform: perspective(600) rotate3d(1, 0, 0, -90deg);
-    -webkit-transform-origin: 50% 0;
-    -webkit-transition: 350ms;
-    transition: 350ms;
-  }
-  #nav li {
-    display: block;
-    float: none;
-  }
-  #nav a {
-    text-align: center;
-    padding: 0;
-    border-top: 1px solid #3B3B3B;
-    height: 44px;
-    line-height: 44px;
-    color: #A6A5A4 !important;
-  }
-}
 #nombre{
   text-align: center;
+  font-family: 'Miniver', cursive;
+ font-size:40px;
+ color:#F2F2F2;
+  
 }
 #git{
   text-decoration: none;
